@@ -1,0 +1,133 @@
+#buttons {
+  text-align: center;
+}
+
+.play {
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
+  outline: none;
+}
+
+/* awesome color palette taken from http://www.colourlovers.com/palette/3465025/Simon_Says */
+.play {
+  fill-opacity:1;
+  stroke:none;
+  cursor: pointer;
+}
+
+.play#red {
+  fill: #bf5757;
+}
+
+.play#green {
+  fill: #7bbf8a;
+}
+
+.play#blue {
+  fill: #56697b;
+}
+
+.play#yellow {
+  fill: #e0e096;
+}
+
+.active#red {
+  fill: #e23434;
+}
+
+.active#green {
+  fill: #58e277;
+}
+
+.active#blue {
+  fill: #2b6aa6;
+}
+
+.active#yellow {
+  fill: #f0f086;
+}
+
+#indicators {
+  text-align: center;
+}
+
+.indicator {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+}
+
+.blink-red {
+  -webkit-animation-name: blinkr;
+  -webkit-animation-duration: 0.7s;
+          animation-name: blinkr;
+          animation-timing-function: step-start;
+          animation-duration: 0.7s;
+}
+
+.blink-blue {
+  -webkit-animation-name: blinkb;
+  -webkit-animation-duration: 0.7s;
+          animation-name: blinkb;
+          animation-timing-function: step-start;
+          animation-duration: 0.7s;
+}
+
+.blink-green {
+  -webkit-animation-name: blinkg;
+  -webkit-animation-duration: 0.7s;
+          animation-name: blinkg;
+          animation-timing-function: step-start;
+          animation-duration: 0.7s;
+}
+
+.blink-yellow {
+  -webkit-animation-name: blinky;
+  -webkit-animation-duration: 0.7s;
+          animation-name: blinky;
+          animation-timing-function: step-start;
+          animation-duration: 0.7s;
+}
+
+@keyframes blinkr {
+  0% {
+    fill: #bf5757;
+  }
+
+  100% {
+    fill: #e23434;
+  }
+}
+
+@keyframes blinkb {
+  0% {
+    fill: #45698c;
+  }
+
+  100% {
+    fill: #2b6aa6;
+  }
+}
+
+@keyframes blinkg {
+  0% {
+    fill: #7bbf8a;
+  }
+
+  100% {
+    fill: #58e277;
+  }
+}
+
+@keyframes blinky {
+  0% {
+    fill: #e0e096;
+  }
+
+  100% {
+    fill: #f0f086;
+  }
+}
