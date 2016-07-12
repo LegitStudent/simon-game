@@ -11,9 +11,14 @@
  "name": "Launch localhost with sourcemaps",
  "type": "chrome",
  "request": "launch",
- "url": "http://localhost/mypage.html",
+ "url": "http://localhost:3000/",
+ "runtimeArgs": [
+     "--new-window",
+     "--user-data-dir=C:/dev/",
+     "--remote-debugging-port=9222"
+ ],
  "sourceMaps": true,
- "webRoot": "wwwroot"
+ "webRoot": "${workspaceRoot}/"
  },
  {
  "name": "Attach",
