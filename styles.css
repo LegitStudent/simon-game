@@ -11,7 +11,35 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  margin-bottom: 30px;
+}
+
+.controls {
+  height: 30px;
+}
+
+#start {
+  width: 90px;
+  border: 0;
+  outline: none;
+  border-radius: 10%;
+}
+
+#strict-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 50px;
+}
+
+#strict-container label {
+  width: 80px;
+  position: absolute;
+  top: 20px;
+  z-index: 99;
+}
+
+#strict-container input {
+  margin: 0;
 }
 
 /* awesome color palette taken from http://www.colourlovers.com/palette/3465025/Simon_Says */

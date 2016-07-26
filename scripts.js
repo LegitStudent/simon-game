@@ -7,6 +7,7 @@ var game = {
   colors: ['r', 'b', 'g', 'y'],
   userPattern: [],
   presses: 0,
+  blinks: 0,
   advanceLevel: function() {
     this.level++;
 
@@ -55,15 +56,16 @@ var game = {
     this.checkLevel = 0;
     this.userPattern = [];
     // alert('You made a mistake');
-    if ($("#strict").prop("checked")) {
-      for (var i = 0; i < this.colors.length; i++) {
-        console.log('playing ' + this.colors[i]);
-        $('.play[data-color="' + this.colors[i] + '"').addClass("blink-" + this.colors[i]);
-        document.getElementById('audio-' + this.colors[i]).play();
-      }
-      this.initialize(true);
+    for (var i = 0; i < this.colors.length; i++) {
+      $('.play[data-color="' + this.colors[i] + '"').addClass("blink-" + this.colors[i]);
+      document.getElementById('audio-' + this.colors[i]).play();
     }
-    this.blinkNext(0);
+
+    if ($("#strict").prop("checked")) {
+      this.initialize(true);
+    } else {
+      setTimeout(this.blinkNext.bind(this), 1000, 0);
+    }
   },
   blinkNext: function(i) {
     if (i === this.currentPattern.length) {
@@ -144,7 +146,12 @@ $(document).ready(function() {
 
   $('.play').on("mouseout mouseup", setInactive);
 
-  $('.play').on('animationend', function(e) {
-    $(this).attr('class', 'play');
+  $('.play').on('animationend', function() {
+    game.blinks++;
+    $(this).attr('class', 'play no-touch');
+    if (game.blinks === game.currentPattern.length) {
+      game.blinks = 0;
+      $(this).attr('class', 'play')
+    }
   });
 });
