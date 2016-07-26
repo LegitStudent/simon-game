@@ -50,7 +50,7 @@
 }
 
 .play#yellow {
-  background: #f0f086;
+  background: #D2B55B; /* I didn't follow the palette on yellow because the orignal yellow was too bright */
   -webkit-clip-path: circle(100% at 100% 0);
           clip-path: circle(100% at 100% 0);
 }
@@ -91,7 +91,7 @@
   border: 2px solid black;
 }
 
-.blink-red {
+.blink-r {
   -webkit-animation-name: blinkr;
   -webkit-animation-duration: 0.7s;
           animation-name: blinkr;
@@ -99,7 +99,7 @@
           animation-duration: 0.7s;
 }
 
-.blink-blue {
+.blink-b {
   -webkit-animation-name: blinkb;
   -webkit-animation-duration: 0.7s;
           animation-name: blinkb;
@@ -107,7 +107,7 @@
           animation-duration: 0.7s;
 }
 
-.blink-green {
+.blink-g {
   -webkit-animation-name: blinkg;
   -webkit-animation-duration: 0.7s;
           animation-name: blinkg;
@@ -115,7 +115,7 @@
           animation-duration: 0.7s;
 }
 
-.blink-yellow {
+.blink-y {
   -webkit-animation-name: blinky;
   -webkit-animation-duration: 0.7s;
           animation-name: blinky;
