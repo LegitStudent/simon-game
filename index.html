@@ -11,8 +11,6 @@
 </head>
 <body>
   <main id="app">
-    <button id="start">Start</button>
-
     <div id="buttons">
       <div class="row">
         <div id="green" class="play" data-color="g">
@@ -20,6 +18,13 @@
         </div>
         <div id="red" class="play" data-color="r">
           <div class="clipper"></div>
+        </div>
+      </div>
+      <div class="row controls">
+        <button id="start">Start</button>
+        <div id="strict-container">
+          <input type="checkbox" id="strict">
+          <label for="strict">Strict Mode</label>
         </div>
       </div>
       <div class="row">
@@ -33,11 +38,13 @@
       </div>
     </div>
 
-    <label><input type="checkbox" id="strict">Strict mode</label>
-    <p>Current Level: <span id="level"></span></p>
-    <p>Check Level: <span id="checkLevel"></span></p>
-    <p>Generated: <span id="checkString"></span></p>
-    <p>User-pressed: <span id="mainString"></span></p>
+    <div id="debug-info">
+      <p>Current Level: {{ level }}</p>
+      <p>Check Level: {{ checkLevel }} </span></p>
+      <p>Generated: {{ currentPattern }} </p>
+      <p>User-pressed: {{ userPattern }}</p>
+      <p>Game blinks: {{ blinks }}</p>
+    </div>
 
     <audio src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" id="audio-r" preload="auto"></audio>
     <audio src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" id="audio-b" preload="auto"></audio>
@@ -45,5 +52,12 @@
     <audio src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" id="audio-y" preload="auto"></audio>
 
   </main>
+
+  <script id="debug">
+    new Vue({
+      el: "#debug-info",
+      data: game
+    });
+  </script>
 </body>
 </html>
