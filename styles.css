@@ -1,52 +1,83 @@
-#buttons {
-  text-align: center;
+.play, .clipper {
+  width: 300px;
+  height: 300px;
 }
 
-.play {
-  width: 50px;
-  height: 50px;
-  border: 0;
-  border-radius: 50%;
-  outline: none;
+.clipper {
+  background: white;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 /* awesome color palette taken from http://www.colourlovers.com/palette/3465025/Simon_Says */
-.play {
-  fill-opacity:1;
-  stroke:none;
-  cursor: pointer;
+
+.play#green {
+  background: #7bbf8a;
+  -webkit-clip-path: circle(100% at 100% 100%);
+          clip-path: circle(100% at 100% 100%);
+}
+
+#green .clipper {
+  -webkit-clip-path: circle(50% at 100% 100%);
+          clip-path: circle(50% at 100% 100%);
 }
 
 .play#red {
-  fill: #bf5757;
+  background: #bf5757;
+  -webkit-clip-path: circle(100% at 0 100%);
+          clip-path: circle(100% at 0 100%);
 }
 
-.play#green {
-  fill: #7bbf8a;
+#red .clipper {
+  -webkit-clip-path: circle(50% at 0 100%);
+          clip-path: circle(50% at 0 100%);
 }
 
 .play#blue {
-  fill: #56697b;
+  background: #56697b;
+  -webkit-clip-path: circle(100% at 0 0);
+          clip-path: circle(100% at 0 0);
+}
+
+#blue .clipper {
+  -webkit-clip-path: circle(50% at 0 0);
+          clip-path: circle(50% at 0 0);
 }
 
 .play#yellow {
-  fill: #cca707;
+  background: #f0f086;
+  -webkit-clip-path: circle(100% at 100% 0);
+          clip-path: circle(100% at 100% 0);
+}
+
+#yellow .clipper {
+  -webkit-clip-path: circle(50% at 100% 0);
+          clip-path: circle(50% at 100% 0);
+}
+
+.play#yellow, .play#green {
+  margin-right: 30px;
 }
 
 .active#red {
-  fill: #e23434;
+  background: #e23434;
 }
 
 .active#green {
-  fill: #58e277;
+  background: #58e277;
 }
 
 .active#blue {
-  fill: #2b6aa6;
+  background: #2b6aa6;
 }
 
 .active#yellow {
-  fill: #f0f086;
+  background: #f0f086;
 }
 
 #indicators {
@@ -94,40 +125,40 @@
 
 @keyframes blinkr {
   0% {
-    fill: #bf5757;
+    background: #bf5757;
   }
 
   100% {
-    fill: #e23434;
+    background: #e23434;
   }
 }
 
 @keyframes blinkb {
   0% {
-    fill: #45698c;
+    background: #45698c;
   }
 
   100% {
-    fill: #2b6aa6;
+    background: #2b6aa6;
   }
 }
 
 @keyframes blinkg {
   0% {
-    fill: #7bbf8a;
+    background: #7bbf8a;
   }
 
   100% {
-    fill: #58e277;
+    background: #58e277;
   }
 }
 
 @keyframes blinky {
   0% {
-    fill: #e0e096;
+    background: #e0e096;
   }
 
   100% {
-    fill: #f0f086;
+    background: #f0f086;
   }
 }
