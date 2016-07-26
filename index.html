@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <title>Sample Text</title>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <!-- vue only for development -->
+  <script src="https://vuejs.org/js/vue.min.js"></script>
   <script src="scripts.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,24 +15,25 @@
 
     <div id="buttons">
       <div class="row">
-        <div id="green" class="play">
+        <div id="green" class="play" data-color="g">
           <div class="clipper"></div>
         </div>
-        <div id="red" class="play">
+        <div id="red" class="play" data-color="r">
           <div class="clipper"></div>
         </div>
       </div>
       <div class="row">
-        <div id="yellow" class="play">
+        <div id="yellow" class="play" data-color="y">
           <div class="clipper"></div>
         </div>
-        <div id="blue" class="play">
+        <div id="blue" class="play" data-color="b">
           <div class="clipper"></div>
         </div>  
         
       </div>
     </div>
 
+    <label><input type="checkbox" id="strict">Strict mode</label>
     <p>Current Level: <span id="level"></span></p>
     <p>Check Level: <span id="checkLevel"></span></p>
     <p>Generated: <span id="checkString"></span></p>
