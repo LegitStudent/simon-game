@@ -72,7 +72,6 @@ var game = {
       $('.play').removeClass('no-touch');
       return false;
     }
-    console.log('blinking: ' + this.currentPattern[i]);
 
     var animClass = "";
     switch(this.currentPattern[i]) {
@@ -137,7 +136,7 @@ $(document).ready(function() {
   // Event Listeners
 
 
-  $('#start').on('click', function(e) {
+  $('.start').on('click', function(e) {
     game.initialize();
     $(this).attr('disabled', true);
   });

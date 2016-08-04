@@ -1,4 +1,10 @@
-.play, .clipper {
+.app {
+  position: relative;
+  max-width: 630px;
+  margin: 100px auto;
+}
+
+.play {
   width: 300px;
   height: 300px;
 }
@@ -11,27 +17,18 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
-.controls {
-  height: 30px;
-}
-
-#start {
-  width: 90px;
-  border: 0;
-  outline: none;
-  border-radius: 10%;
-}
-
-#strict-container {
+/*
+.strict-container {
   display: flex;
   flex-direction: column;
   position: relative;
   margin-left: 50px;
 }
 
-#strict-container label {
+.strict-container label {
   width: 80px;
   position: absolute;
   top: 20px;
@@ -41,51 +38,52 @@
 #strict-container input {
   margin: 0;
 }
+*/
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  
+  /* position and size */
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  /* for vertical and horizontal centering */
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+
+  border-radius: 100%;
+}
+
+.start {
+  margin-right: 30px;
+}
+
+.current-level {
+  margin-right: 30px;
+}
 
 /* awesome color palette taken from http://www.colourlovers.com/palette/3465025/Simon_Says */
 
 .play#green {
   background: #7bbf8a;
-  -webkit-clip-path: circle(100% at 100% 100%);
-          clip-path: circle(100% at 100% 100%);
-}
-
-#green .clipper {
-  -webkit-clip-path: circle(50% at 100% 100%);
-          clip-path: circle(50% at 100% 100%);
+  border-top-left-radius: 100%;
 }
 
 .play#red {
   background: #bf5757;
-  -webkit-clip-path: circle(100% at 0 100%);
-          clip-path: circle(100% at 0 100%);
-}
-
-#red .clipper {
-  -webkit-clip-path: circle(50% at 0 100%);
-          clip-path: circle(50% at 0 100%);
+  border-top-right-radius: 100%;
 }
 
 .play#blue {
   background:#4C516D;
-  -webkit-clip-path: circle(100% at 0 0);
-          clip-path: circle(100% at 0 0);
-}
-
-#blue .clipper {
-  -webkit-clip-path: circle(50% at 0 0);
-          clip-path: circle(50% at 0 0);
+  border-bottom-right-radius: 100%;
 }
 
 .play#yellow {
   background: #D2B55B; /* I didn't follow the palette on yellow because the orignal yellow was too bright */
-  -webkit-clip-path: circle(100% at 100% 0);
-          clip-path: circle(100% at 100% 0);
-}
-
-#yellow .clipper {
-  -webkit-clip-path: circle(50% at 100% 0);
-          clip-path: circle(50% at 100% 0);
+  border-bottom-left-radius: 100%;
 }
 
 .play#yellow, .play#green {
