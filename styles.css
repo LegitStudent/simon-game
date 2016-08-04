@@ -1,7 +1,19 @@
+body {
+  background: #fdf6e3;
+  color: #657b83;
+  font-family: Arial, Helvetica, sans-serif
+}
+
 .app {
   position: relative;
   max-width: 630px;
-  margin: 100px auto;
+  margin: 50px auto;
+}
+
+.header-text {
+  text-align: center;
+  font-size: 4em;
+  margin-bottom: 0;
 }
 
 .play {
@@ -20,34 +32,14 @@
   margin-bottom: 30px;
 }
 
-/*
-.strict-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-left: 50px;
-}
-
-.strict-container label {
-  width: 80px;
-  position: absolute;
-  top: 20px;
-  z-index: 99;
-}
-
-#strict-container input {
-  margin: 0;
-}
-*/
 .controls {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  
+  background: #fdf6e3;  
   /* position and size */
-  width: 300px;
-  height: 300px;
+  width: 315px;
+  height: 315px;
   position: absolute;
   /* for vertical and horizontal centering */
   top: 0; left: 0; bottom: 0; right: 0;
