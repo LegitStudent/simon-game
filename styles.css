@@ -67,7 +67,7 @@
 }
 
 .play#blue {
-  background: #56697b;
+  background:#4C516D;
   -webkit-clip-path: circle(100% at 0 0);
           clip-path: circle(100% at 0 0);
 }
