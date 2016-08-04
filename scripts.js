@@ -14,6 +14,7 @@ var game = {
     if (this.level === 21) {
       alert('You win!');
       this.initialize();
+      return;
     }
 
     this.checkLevel = 0;
@@ -55,7 +56,6 @@ var game = {
   userMistake: function() {
     this.checkLevel = 0;
     this.userPattern = [];
-    // alert('You made a mistake');
     for (var i = 0; i < this.colors.length; i++) {
       $('.play[data-color="' + this.colors[i] + '"').addClass("blink-" + this.colors[i]);
       document.getElementById('audio-' + this.colors[i]).play();
